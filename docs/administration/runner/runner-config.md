@@ -61,3 +61,36 @@ java -Drunner.rundeck.overrideTempDir=true -Drunner.dirs.tmp=/your/custom/dir -j
 
 [Runner APIs](/api/index.md#runner-management) are available to create, edit, download, and delete Runners.
 
+## Runner configuration in a Docker container
+
+You can configure java command line arguments properties by using the 'command' property in a docker compose file or docker run command.
+
+This will override the default command on the container startup (`java -jar pd-runner.jar``) to the java command with the appropriated arguments.
+
+Here is an example for a Proxy configuration on a Runner container:
+
+**Docker compose file**
+
+```
+version: '3.9'
+services:
+    runner:
+        image: 'rundeckpro/runner:5.9.0'
+        environment:
+            - RUNNER_RUNDECK_CLIENT_ID=<your-runner-id>
+            - 'RUNNER_RUNDECK_SERVER_URL=https://<your-subdomain>.runbook.pagerduty.cloud'
+            - RUNNER_RUNDECK_SERVER_TOKEN=<your-api-token>
+        command: "java -Dmicronaut.http.client.proxy-type=http -Dmicronaut.http.client.proxy-address=proxysrv:443 -jar pd-runner.jar"
+```
+
+**Docker run command**
+
+```
+docker run \
+  --name runner \
+  -e RUNNER_RUNDECK_CLIENT_ID=<your-runner-id> \
+  -e RUNNER_RUNDECK_SERVER_URL=https://<your-subdomain>.runbook.pagerduty.cloud \
+  -e RUNNER_RUNDECK_SERVER_TOKEN=<your-api-token> \
+  rundeckpro/runner:5.9.0 \
+  java -Dmicronaut.http.client.proxy-type=http -Dmicronaut.http.client.proxy-address=proxysrv:443 -jar pd-runner.jar
+```
