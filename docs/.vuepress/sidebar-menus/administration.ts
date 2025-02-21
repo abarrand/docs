@@ -173,6 +173,7 @@ export default [{
                 link: '/administration/cluster/',
                 children: [
                   '/administration/cluster/',
+                  '/administration/cluster/cluster-manager.md',
                   {
                     text: 'Load Balancer',
                     collapsible: true,

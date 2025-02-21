@@ -1,5 +1,8 @@
 # Replication
 
+:::enterprise
+:::
+
 In order to keep a Rundeck Enterprise Cluster in sync, we provide plugins to replicate Rundeck state across instances.
 
 ## Job Replication Plugin
