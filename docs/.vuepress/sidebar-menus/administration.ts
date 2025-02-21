@@ -58,7 +58,7 @@ export default [{
                     collapsible: true,
                     children: [
                       '/administration/runner/runner-installation/creating-runners.md',
-                      {text:'Installing Runners',link:'/administration/runner/runner-installation/runner-install.md'},
+                      {text:'Advanced Installation Options',link:'/administration/runner/runner-installation/runner-install.md'},
                     ]
                   },
                   {
