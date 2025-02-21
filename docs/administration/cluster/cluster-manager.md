@@ -1,6 +1,7 @@
 # Cluster Manager
 
-:::enterprise
+::: note
+This feature is only available in Runbook Automation Self-Hosted versions.
 :::
 
 The Cluster Manager provides a centralized interface for monitoring and managing Runbook Automation cluster instances. This feature enables administrators to view cluster health, manage instance states, and balance workloads across the cluster.
