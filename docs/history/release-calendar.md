@@ -20,10 +20,6 @@ Upgrade instructions [can be found here](/upgrading/index.md).
 | [5.2.0](/history/5_x/version-5.2.0.md)   | April 10th, 2024    | Supported |
 | [5.1.2](/history/5_x/version-5.1.1.md)   | March 28th, 2024    | Supported |
 | [5.1.1](/history/5_x/version-5.1.1.md)   | March 5th, 2024    | Supported |
-| [5.1.0](/history/5_x/version-5.1.0.md)   | February 14th, 2024    | Supported |
-| [5.0.2](/history/5_x/version-5.0.2.md)   | February 12th, 2024    | Supported |
-| [5.0.1](/history/5_x/version-5.0.1.md)   | January 15th, 2024    | Supported |
-| [5.0.0](/history/5_x/version-5.0.0.md)   | December 14th, 2023    | Supported |
 
 ::: warning
 With the release of [version 5.0.0](5_x/version-5.0.0.html) the 4.x series was placed into Maintenance Support status. All fixes to the product will be made in the 5.x series.  Critical bugs may be back ported to the 4.x series as determined by the PagerDuty Automation Product Team.
